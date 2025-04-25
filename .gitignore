@@ -26,7 +26,6 @@ models/checkpoint-*/
 # --- Node / React / Vite ---
 node_modules/
 .vite/
-vite.config.js
 .vscode/
 
 # Vite cache
