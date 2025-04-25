@@ -1,0 +1,14 @@
+# FastAPI and serving
+fastapi
+uvicorn
+
+# Transformers and Hugging Face libraries
+transformers
+datasets
+sentence-transformers
+
+# Install CPU-only PyTorch for compatibility (no CUDA issues)
+torch --index-url https://download.pytorch.org/whl/cpu
+
+# Environment management
+python-dotenv
