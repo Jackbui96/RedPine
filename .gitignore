@@ -1,0 +1,50 @@
+# --- Python / FastAPI ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+.venv/
+.env
+.env.*
+dist/
+build/
+.cache/
+.pytest_cache/
+coverage.*
+htmlcov/
+.mypy_cache/
+.dmypy.json
+*.sqlite3
+
+# FastAPI model artifacts
+models/customer-support-llm/
+models/checkpoint-*/
+
+# --- Node / React / Vite ---
+node_modules/
+.vite/
+vite.config.ts
+.vscode/
+
+# Vite cache
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# --- OS/Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+
+# --- Docker / Deploy ---
+*.pid
+*.sock
+docker-compose.override.yml
