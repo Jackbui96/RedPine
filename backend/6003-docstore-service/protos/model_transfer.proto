@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package modeltransfer;
+
+service ModelTransferService {
+  rpc SendModel (ModelPayload) returns (TransferStatus);
+}
+
+message ModelPayload {
+  string model_folder = 1;
+}
+
+message TransferStatus {
+  bool success = 1;
+  string message = 2;
+}

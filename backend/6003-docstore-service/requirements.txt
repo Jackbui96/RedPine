@@ -1,0 +1,6 @@
+# gRPC
+grpcio
+grpcio-tools
+
+# AWS SDK
+boto3
