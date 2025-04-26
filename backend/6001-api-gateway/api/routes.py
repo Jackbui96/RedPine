@@ -1,19 +1,9 @@
-from fastapi import APIRouter, Depends, UploadFile, File
-from models.schemas import QueryRequest, FeedbackRequest, QueryResponse
-# from app.core.rag_engine import generate_response
-# from app.services.upload import process_document
-# from app.services.feedback import save_feedback
+from fastapi import APIRouter
+from models.schemas import QueryRequest, QueryResponse
+from services.rag_engine import generate_response
 
 router = APIRouter()
 
-@router.post("/query", response_model=QueryResponse)
+@router.post("/rag/query", response_model=QueryResponse)
 async def query_handler(request: QueryRequest):
     return generate_response(request.query)
-
-@router.post("/upload")
-async def upload_handler(file: UploadFile = File(...)):
-    return await process_document(file)
-
-@router.post("/feedback")
-async def feedback_handler(feedback: FeedbackRequest):
-    return save_feedback(feedback)
