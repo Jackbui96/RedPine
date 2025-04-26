@@ -1,0 +1,31 @@
+services:
+  api-gateway:
+    image: nguyenhkbui/6001-api-gateway
+    container_name: 6001-api-gateway
+    ports:
+      - "6001:6001"
+    depends_on:
+      - docstore
+    volumes:
+      - ~/.aws:/root/.aws
+      - shared-models:/tmp/
+    networks:
+      - redpine-network
+
+  docstore:
+    image: nguyenhkbui/6003-docstore-service
+    container_name: 6003-docstore-service
+    ports:
+      - "6003:6003"
+    volumes:
+      - ~/.aws:/root/.aws
+      - shared-models:/tmp/
+    networks:
+      - redpine-network
+
+networks:
+  redpine-network:
+    driver: bridge
+
+volumes:
+  shared-models:
