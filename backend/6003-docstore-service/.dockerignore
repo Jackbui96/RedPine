@@ -1,0 +1,24 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Ignore local environment folders
+.venv/
+.env
+*.env
+
+# Ignore IDE/project files
+.idea/
+*.iml
+
+# Ignore Docker-related leftovers
+Dockerfile
+docker-compose.yml
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
